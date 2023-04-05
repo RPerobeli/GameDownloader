@@ -15,6 +15,6 @@ namespace GameDownloader.Repository.Context
             modelBuilder.ApplyConfiguration(new GameMapping());
             base.OnModelCreating(modelBuilder);
         }
-        public DbSet<Game> pokemon { get; set; }
+        public DbSet<Game> Games { get; set; }
     }
 }

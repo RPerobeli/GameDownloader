@@ -1,3 +1,4 @@
+using GameDownloader.DependencyInjection;
 using GameDownloader.Repository.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -8,6 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.AddGameModules();
 builder.Services.AddDbContext<GameDownloaderContext>(options =>
 {
     //options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
